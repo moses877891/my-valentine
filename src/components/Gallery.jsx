@@ -1,13 +1,13 @@
 import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 
 // src/components/Gallery.jsx
-const base = import.meta.env.BASE_URL; // '/' in dev, '/my-valentine/' on Pages
-console.log('Gallery base URL:', base);
+const base = "https://moses877891.github.io/my-valentine/photos"; // '/' in dev, '/my-valentine/' on Pages
+//console.log('Gallery base URL:', base);
 
 // If you have 10 images named 1.jpg..10.jpg inside public/photos/
 const photos = Array.from({ length: 11 }, (_, i) => {
   const n = i + 1;
-  return { src: `${base}photos/${n}.jpg`, alt: `Us #${n}` };
+  return { src: `${base}/${n}.jpg`, alt: `Us #${n}` };
 });
 
 // Helper to chunk into pages of size N
