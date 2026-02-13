@@ -1,19 +1,14 @@
 import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react';
 
-// === 10 images: adjust filenames if needed ===
-const photos = [
-  { src: 'photos/1.jpg',  alt: 'Us #1'  },
-  { src: 'photos/2.jpg',  alt: 'Us #2'  },
-  { src: 'photos/3.jpg',  alt: 'Us #3'  },
-  { src: 'photos/4.jpg',  alt: 'Us #4'  },
-  { src: 'photos/5.jpg',  alt: 'Us #5'  },
-  { src: 'photos/6.jpg',  alt: 'Us #6'  },
-  { src: 'photos/7.jpg',  alt: 'Us #7'  },
-  { src: 'photos/8.jpg',  alt: 'Us #8'  },
-  { src: 'photos/9.jpg',  alt: 'Us #9'  },
-  { src: 'photos/10.jpg', alt: 'Us #10' },
-  { src: 'photos/11.jpg', alt: 'Us #11' },
-];
+// src/components/Gallery.jsx
+const base = import.meta.env.BASE_URL; // '/' in dev, '/my-valentine/' on Pages
+console.log('Gallery base URL:', base);
+
+// If you have 10 images named 1.jpg..10.jpg inside public/photos/
+const photos = Array.from({ length: 11 }, (_, i) => {
+  const n = i + 1;
+  return { src: `${base}photos/${n}.jpg`, alt: `Us #${n}` };
+});
 
 // Helper to chunk into pages of size N
 function chunk(arr, size) {
