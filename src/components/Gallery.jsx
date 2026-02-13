@@ -2,17 +2,17 @@ import React, { useEffect, useMemo, useState, useCallback, useRef } from 'react'
 
 // === 10 images: adjust filenames if needed ===
 const photos = [
-  { src: '../public/photos/1.jpg',  alt: 'Us #1'  },
-  { src: '../public/photos/2.jpg',  alt: 'Us #2'  },
-  { src: '../public/photos/3.jpg',  alt: 'Us #3'  },
-  { src: '../public/photos/4.jpg',  alt: 'Us #4'  },
-  { src: '../public/photos/5.jpg',  alt: 'Us #5'  },
-  { src: '../public/photos/6.jpg',  alt: 'Us #6'  },
-  { src: '../public/photos/7.jpg',  alt: 'Us #7'  },
-  { src: '../public/photos/8.jpg',  alt: 'Us #8'  },
-  { src: '../public/photos/9.jpg',  alt: 'Us #9'  },
-  { src: '../public/photos/10.jpg', alt: 'Us #10' },
-  { src: '../public/photos/11.jpg', alt: 'Us #11' },
+  { src: './public/photos/1.jpg',  alt: 'Us #1'  },
+  { src: './public/photos/2.jpg',  alt: 'Us #2'  },
+  { src: './public/photos/3.jpg',  alt: 'Us #3'  },
+  { src: './public/photos/4.jpg',  alt: 'Us #4'  },
+  { src: './public/photos/5.jpg',  alt: 'Us #5'  },
+  { src: './public/photos/6.jpg',  alt: 'Us #6'  },
+  { src: './public/photos/7.jpg',  alt: 'Us #7'  },
+  { src: './public/photos/8.jpg',  alt: 'Us #8'  },
+  { src: './public/photos/9.jpg',  alt: 'Us #9'  },
+  { src: './public/photos/10.jpg', alt: 'Us #10' },
+  { src: './public/photos/11.jpg', alt: 'Us #11' },
 ];
 
 // Helper to chunk into pages of size N
