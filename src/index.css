@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* your custom CSS classes here */
+.bg-valentine {
+  background: radial-gradient(1200px 800px at 70% 20%, #ffe6ea 0%, #fff 45%);
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.95; }
+  100% { transform: translateY(-110vh) scale(1.2) rotate(20deg); opacity: 0; }
+}
+
+.floating-heart {
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
